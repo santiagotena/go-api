@@ -21,10 +21,10 @@ curl localhost:8080/books --include --header "Content-Type: application/json" -d
 
 Checkout a book from the library, if stock allows it - PATCH
 ```bash
-curl localhost:8080/checkout --request "PATCH"
+curl localhost:8080/checkout?id=2 --request "PATCH"
 ```
 
 Return a book to the library, increase book quantity - PATCH
 ```bash
-curl localhost:8080/checkout?id=2 --request "PATCH"
+curl localhost:8080/return?id=2 --request "PATCH"
 ```
